@@ -89,3 +89,32 @@
         /* Five columns */
     }
 }
+/* job Conatiner  */
+.job-container{
+    /* display: grid; */
+    grid-gap: 1rem;
+    /* justify-items: start; */
+    display: grid;
+    grid-template-columns: auto; /* Create a single column */
+    justify-items: start; /* Align items to the start (left) */
+    /* grid-template-columns: repeat(1, minmax(0, 1fr)); */
+    /* Default to one column for all screen sizes */
+    
+    @media (min-width: 640px) {
+        /* Small screens */
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        /* Two columns */
+    }
+
+    @media (min-width: 768px) {
+        /* Medium screens */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Two columns */
+    }
+
+    @media (min-width: 1024px) {
+        /* Large screens */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Five columns */
+    }
+}

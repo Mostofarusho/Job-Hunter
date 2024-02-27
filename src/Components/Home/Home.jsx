@@ -1,7 +1,10 @@
 import React from 'react';
 import "./Home.css";
 import { BookOpenIcon, LightBulbIcon, ShareIcon, ShoppingBagIcon } from '@heroicons/react/24/solid'
+import { useLoaderData } from 'react-router-dom';
+import Job from '../Job/Job';
 const Home = () => {
+    const jobs = useLoaderData();
     return (
         <div className="home-container">
             {/* Main Description  */}
@@ -62,6 +65,13 @@ const Home = () => {
             <div className='job-featured m-y-6'>
                 <h1 className='text-5xl '>Featured Jobs </h1>
                 <p>Explore thousand of jobs.Its your future take it.</p>
+                <div className="job-container text-left m-4 p-4">
+                    {
+                        jobs.map(job => <Job key={job.id} job={job}>
+
+                        </Job>)
+                    }
+                </div>
             </div>
         </div>
 

@@ -1,0 +1,20 @@
+.remote{
+    border: 1px solid red;
+    
+}
+
+/* .img{
+    width: 8px;
+    height: 8px;
+} */
+.details-button {
+    
+    font-size: larger;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+
+}
