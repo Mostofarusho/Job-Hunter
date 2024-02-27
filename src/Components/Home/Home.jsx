@@ -1,0 +1,71 @@
+import React from 'react';
+import "./Home.css";
+import { BookOpenIcon, LightBulbIcon, ShareIcon, ShoppingBagIcon } from '@heroicons/react/24/solid'
+const Home = () => {
+    return (
+        <div className="home-container">
+            {/* Main Description  */}
+            <div className='description-body'>
+                {/* main description  */}
+                <div className="description text-left">
+                    <h1 className='description-header text-5xl'>One Step Closer To Your
+                        <br></br>
+                        <span className='color-blue'>Dream Job</span></h1>
+                    <p className='description-paragraph text-sm'>Explore 1000 of oppurtunity from my site.Both onsite and remote jobs are available in my site.I am not a job provider and I am also looking for a job Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laudantium similique fugiat dignissimos accusantium impedit provident, numquam hic eaque nihil autem? Deserunt vel, veniam eos cumque nesciunt ullam necessitatibus hic?</p>
+                    <button className='description-button'>Get Started</button>
+                </div>
+                <div>
+                    <img src="./my-model.jpg" className='model' alt="Description of the image" />
+
+                </div>
+            </div>
+            {/* Job category List  */}
+            <div className="job-category">
+                <h2 className='description-header text-5xl my-4'>Job Category List </h2>
+                <p className='my-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, tempora!</p>
+                <div className='available-jobs'>
+                    <div>
+                        <ul className='text-left'>
+                            <li><BookOpenIcon className="h-6 w-6 text-blue-500" /></li>
+                            <li >Account & Finance</li>
+                            <li>300 Jobs Available</li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <ul className='text-left'>
+                            <li><LightBulbIcon className="h-6 w-6 text-blue-500" /></li>
+                            <li>Creative Design</li>
+                            <li>1000 Jobs Available</li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <ul className='text-left'>
+                            <li><ShoppingBagIcon className="h-6 w-6 text-blue-500" /></li>
+                            <li>Marketing and Sales</li>
+                            <li>500 Jobs Available</li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <ul className='text-left'>
+                            <li><ShareIcon className="h-6 w-6 text-blue-500" /></li>
+                            <li>Engineering JObs</li>
+                            <li>100 Jobs Available</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            {/* Featured Jobs  */}
+            <div className='job-featured m-y-6'>
+                <h1 className='text-5xl '>Featured Jobs </h1>
+                <p>Explore thousand of jobs.Its your future take it.</p>
+            </div>
+        </div>
+
+    );
+};
+
+export default Home;

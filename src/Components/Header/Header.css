@@ -1,0 +1,53 @@
+.nav-container {
+    position: relative;
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @media (min-width: 640px) {
+        /* Small screens */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Two columns */
+    }
+
+    @media (min-width: 768px) {
+        /* Medium screens */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Two columns */
+    }
+
+    @media (min-width: 1024px) {
+        /* Large screens */
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        /* Five columns */
+    }
+}
+
+nav a {
+    margin-right: 10px;
+    font-weight: 100;
+}
+
+nav h2 {
+    font-size: larger;
+    font-weight: bolder;
+    font-style: normal;
+    color: black;
+    left: 0;
+    
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+nav button {
+    font-size: larger;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    right: 0;
+    position: absolute;
+}
