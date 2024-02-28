@@ -11,6 +11,8 @@ import Home from './Components/Home/Home.jsx';
 import Statistics from './Components/Statistics/Statistics.jsx';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs.jsx';
 import Blog from './Components/Blog/Blog.jsx';
+import JobDetails from './Components/JobDetails/JobDetails.jsx';
+import { fetchJobDetails } from './utils/JobDetailsLoader.js';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,19 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch('products.json'),
       },
+      {
+        path: "/job/:jobId",
+        element: <JobDetails></JobDetails>,
+        loader: async ({ params }) => {
+          try {
+            return await fetchJobDetails(params.jobId);
+          } catch (error) {
+            throw error; // Rethrow the error to be caught by the error boundary
+          }
+        },
+      },
+
+
       {
         path: "/stat",
         element: <Statistics></Statistics>,

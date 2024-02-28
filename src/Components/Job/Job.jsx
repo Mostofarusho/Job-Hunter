@@ -1,12 +1,13 @@
 import React from 'react';
 import "./Job.css";
 import { CurrencyDollarIcon, MapPinIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 const Job = ({ job }) => {
     const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
-        <div className='job-container'>
+        <div className='single-jobs-container'>
             <div>
-                <img src={logo} className='w-20 h-20' alt="LOGO" />
+                <img src={logo} className='w-20 h-20 ' alt="LOGO" />
                 <h2 className='text-3xl'>{job_title}</h2>
                 <p className='text-2xl'>{company_name}</p>
                 <div className='flex justify-evenly p-2'>
@@ -24,7 +25,9 @@ const Job = ({ job }) => {
                     </div>
                     
                 </div>
-                <button className='details-button '>Show Details</button>
+                {/* <button className='details-button '>Show Details</button> */}
+                <Link to={`/job/${id}`} className='details-button'>Show Details</Link>
+                
             </div>
         </div>
     );

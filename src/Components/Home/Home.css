@@ -91,7 +91,10 @@
 }
 /* job Conatiner  */
 .job-container{
+    
     /* display: grid; */
+    
+   
     grid-gap: 1rem;
     /* justify-items: start; */
     display: grid;
@@ -117,4 +120,15 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         /* Five columns */
     }
+}
+
+.showAllData-button{
+    font-size: larger;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    place-items: 'center' ;
 }

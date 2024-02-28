@@ -1,14 +1,19 @@
-.remote{
+.remote {
     border: 1px solid red;
-    
+
 }
 
 /* .img{
     width: 8px;
     height: 8px;
 } */
+.single-jobs-container {
+    border: 1px solid red;
+    padding: 10px;
+}
+
 .details-button {
-    
+
     font-size: larger;
     font-weight: 100;
     font-style: normal;

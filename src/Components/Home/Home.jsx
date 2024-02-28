@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Home.css";
 import { BookOpenIcon, LightBulbIcon, ShareIcon, ShoppingBagIcon } from '@heroicons/react/24/solid'
 import { useLoaderData } from 'react-router-dom';
 import Job from '../Job/Job';
+import JobDetails from '../JobDetails/JobDetails';
 const Home = () => {
     const jobs = useLoaderData();
+    const [showAllData, setShowAllData] = useState(false);
+    const handleShowAllData = () => {
+        setShowAllData(true);
+    }
     return (
         <div className="home-container">
             {/* Main Description  */}
@@ -65,13 +70,22 @@ const Home = () => {
             <div className='job-featured m-y-6'>
                 <h1 className='text-5xl '>Featured Jobs </h1>
                 <p>Explore thousand of jobs.Its your future take it.</p>
-                <div className="job-container text-left m-4 p-4">
-                    {
-                        jobs.map(job => <Job key={job.id} job={job}>
-
-                        </Job>)
-                    }
+                <div className="job-container text-left m-4 p-4 ">
+                    {showAllData ? (
+                        // If showAllData is true, show all data
+                        jobs.map(job => <Job key={job.id} job={job}></Job>
+                      
+                        )
+                    ) : (
+                        // If showAllData is false, show only the first four items
+                        jobs.slice(0, 4).map(job => <Job key={job.id} job={job}></Job>)
+                    )}
+                   
                 </div>
+                {!showAllData && (
+                        // Render the button only if showAllData is false
+                        <button onClick={handleShowAllData} className='showAllData-button'>See All Jobs</button>
+                    )}
             </div>
         </div>
 
