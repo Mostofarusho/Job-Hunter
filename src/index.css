@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.active{
+    @apply font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-400
+  }
+  
+  .default{
+    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400
+  }
+  .tagName{
+    @apply  font-bold
+  }
+  .navButton{
+     font-size: larger; font-weight: 100; font-style: normal; color: white; background-color: blue; padding: 10px; border-radius: 10px; 
+     
+  }

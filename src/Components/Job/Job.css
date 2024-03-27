@@ -8,12 +8,12 @@
     height: 8px;
 } */
 .single-jobs-container {
-    border: 1px solid red;
-    padding: 10px;
+    /* border: 1px solid red; */
+    padding: 20px;
 }
 
 .details-button {
-
+    margin-top: 10px;
     font-size: larger;
     font-weight: 100;
     font-style: normal;
